@@ -1,0 +1,30 @@
+{
+  "name": "init",
+  "version": "0.1.0",
+  "authors": [
+    "Aly/Da <alyda@me.com>"
+  ],
+  "description": "Starter project",
+  "homepage": "https://github.com/alycda/init",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "barebones": "https://github.com/paulrobertlloyd/barebones.git",
+
+    "modernizr": "latest",
+    "jquery": "latest",
+    "requirejs": "latest",
+
+    "normalize.scss": "latest",
+    "bourbon": "latest",
+    "neat": "latest",
+    "font-awesome": "latest",
+    "colors": "latest"
+  }
+}

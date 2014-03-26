@@ -88,8 +88,10 @@ $RECYCLE.BIN/
 *.sublime-project
 
 # ————————————————
-# CODA
-#
+# CODEKIT
+# https://github.com/jrodl3r/h5bp-codekit/blob/master/.gitignore
+js/core.min.js
+js/plugins.min.js
 
 # ————————————————
 # NODE
