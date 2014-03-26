@@ -1,0 +1,34 @@
+{
+  "name": "init",
+  "version": "0.1.0",
+  "description": "Starter project",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alycda/init"
+  },
+  "author": "Aly/Da <alyda@me.com>",
+  "bugs": {
+    "url": "https://github.com/alycda/init/issues"
+  },
+  "homepage": "https://github.com/alycda/init",
+  "scripts": {
+    "postinstall": "bower install"
+  },
+  "engines": {
+    "node": ">=0.10"
+  },
+  "devDependencies": {
+    "bower": "latest",
+    "grunt": "latest",
+    "grunt-contrib-sass": "latest",
+    "grunt-contrib-concat": "latest",
+    "grunt-contrib-uglify": "latest",
+    "grunt-contrib-requirejs": "latest",
+    "grunt-contrib-csslint": "latest",
+    "grunt-contrib-jshint": "latest",
+    "grunt-contrib-imagemin": "latest",
+    "grunt-contrib-watch": "latest",
+    "load-grunt-tasks": "latest",
+    "grunt-modernizr": "latest"
+  }
+}
