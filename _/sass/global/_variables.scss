@@ -1,0 +1,85 @@
+@import "colors/sass/colors";
+
+// $primary:              ;
+// $secondary:            ;
+// $tertiary:             ;
+// $accent:               ;
+// $accent2:              ;
+// $accent3:              ;
+
+$sans-font-stack:        "Helvetica Neue", Helvetica, Arial, sans-serif;
+$sans:                   $sans-font-stack;
+// $fallback:               'Segoe, sans-serif';
+// $Light:                  'UNicod Sans Light', $fallback;
+// $Medium:                 'UNicod Sans Medium', $fallback;
+// $UltraLight:             'UNicod Sans Ultra Light', $fallback;
+
+// $desktop-font-size:      16px; //$browser-default-font-size
+// $desktop-line-height:    22.48px;
+
+// $h1:                     36px;
+// $h2:                     $h1;
+// $h3:                     24px;
+// $h4:                     18px;
+// $h5:                     $h4;
+// $h6:                     $h4;
+
+
+// $mobile-font-size:       22px; //14.67px
+// $mobile-line-height:     28.31px;
+
+// $mobile-h1:              33px;
+// $mobile-h2:             $mobile-h1;
+// $mobile-h3:             ??px;
+// $mobile-h4:             ??px;
+// $mobile-h5:             $mobile-h4;
+// $mobile-h6:             $mobile-h4;
+
+
+// $desktop-cols:           12;
+// $desktop-gutter:         20px; //$base-line-height [DESKTOP]
+
+// $mobile-cols:            4;
+// $mobile-gutter:          5px;
+
+
+
+// 320-479 XS
+// 480-767 Small
+// 768-1919 Medium
+// 1920-oo Large
+
+
+// XSmall screen / phone
+$screen-xs:                  320px !default; // & up
+$screen-phone:               $screen-xs !default;
+
+// Small screen
+$screen-sm:                  480px !default; // & up
+
+// Medium screen / tablet
+$screen-md:                  768px !default; // & up
+$screen-tablet:              $screen-md !default;
+
+// Large screen / desktop
+$screen-desktop:             960px !default;
+
+// XLarge Large screen / tv
+$screen-lg:                  1920px !default; // & up
+$screen-tv:                  $screen-lg !default;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max:              ($screen-sm - 1) !default;
+$screen-sm-max:              ($screen-md - 1) !default;
+$screen-md-max:              ($screen-lg - 1) !default;
+
+
+// Z-INDEXES !!!!
+
+// $z-grid: 0; //-10
+// $z-image: -5;
+// $z-video:  0;
+// $z-controls: 3;
+// $z-content: 5;
+// $z-nav: 20;
+// $z-modals: 50;
