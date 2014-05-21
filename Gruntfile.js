@@ -9,16 +9,16 @@ module.exports = function(grunt) {
       base: '_/',
       sass: '<%= dirs.base %>sass/',
       css: '<%= dirs.base %>css/',
-      js: '<%= dirs.base %>js/'
+      js: '<%= dirs.base %>js/',
+      build: '<%= dirs.base %>build/'
     },
 
     compass: {
       dev: {
         options: {
-          basePath: '<%= dirs.base %>',
-          sassDir: 'sass/',
-          cssDir: 'css/',
-          importPath: '_/components/',
+          sassDir: '<%= dirs.sass %>',
+          cssDir: '<%= dirs.css %>', // build/
+          importPath: '<%= dirs.base %>components/',
           environment: 'development',
           outputStyle: 'compact',
           specify: '<%= dirs.sass %><%= pkg.name %>.scss',
@@ -30,10 +30,9 @@ module.exports = function(grunt) {
 
       dist: {
         options: {
-          basepath: '<%= dirs.base %>',
-          sassDir: 'sass/',
-          cssDir: 'css/',
-          importPath: '_/components/',
+          sassDir: '<%= dirs.sass %>',
+          cssDir: '<%= dirs.css %>',
+          importPath: '<%= dirs.base %>components/',
           environment: 'production',
           outputStyle: 'compressed',
           specify: '<%= dirs.sass %><%= pkg.name %>.scss',
@@ -57,7 +56,7 @@ module.exports = function(grunt) {
         options: {
           mainConfigFile: '<%= dirs.js %>/common.js',
           appDir: '<%= dirs.js %>',
-          dir: '_/build',
+          dir: '<%= dirs.build %>',
           keepBuildDir: true,
           modules: [
             {
