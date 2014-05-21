@@ -18,17 +18,17 @@
     "node": ">=0.10"
   },
   "devDependencies": {
-    "bower": "latest",
-    "grunt": "latest",
-    "grunt-contrib-sass": "latest",
-    "grunt-contrib-concat": "latest",
-    "grunt-contrib-uglify": "latest",
-    "grunt-contrib-requirejs": "latest",
-    "grunt-contrib-csslint": "latest",
-    "grunt-contrib-jshint": "latest",
-    "grunt-contrib-imagemin": "latest",
-    "grunt-contrib-watch": "latest",
-    "load-grunt-tasks": "latest",
-    "grunt-modernizr": "latest"
+    "bower": "*",
+    "grunt": "*",
+    "grunt-contrib-compass": "*",
+    "grunt-contrib-concat": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-requirejs": "*",
+    "grunt-contrib-csslint": "*",
+    "grunt-contrib-jshint": "*",
+    "grunt-contrib-imagemin": "*",
+    "grunt-contrib-watch": "*",
+    "load-grunt-tasks": "*",
+    "grunt-modernizr": "*"
   }
 }
