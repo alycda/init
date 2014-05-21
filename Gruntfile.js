@@ -4,32 +4,39 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
+    // Templates!
+    dirs: {
+      base: '_/',
+      sass: '<%= dirs.base %>sass/',
+      js: '<%= dirs.base %>js/'
+    },
+
     compass: {
       dev: {
         options: {
-          basePath: '_/',
+          basePath: '<%= dirs.base %>',
           sassDir: 'sass/',
           cssDir: 'css/',
           importPath: '_/components/',
           environment: 'development',
           outputStyle: 'compact',
-          specify: '_/sass/init.scss',
+          specify: '<%= dirs.sass %><%= pkg.name %>.scss',
           // require: ['sass-css-importer'],
           trace: true,
-          banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
+          banner: '/*! <%= pkg.name %> (<%= pkg.version %>), built on <%= grunt.template.today("yyyy-mm-dd") %> */\n'
         }
       },
 
       dist: {
         options: {
-          basepath: '_/',
+          basepath: '<%= dirs.base %>',
           sassDir: 'sass/',
           cssDir: 'css/',
           importPath: '_/components/',
           environment: 'production',
           outputStyle: 'compressed',
-          specify: '_/sass/init.scss',
-          banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
+          specify: '<%= dirs.sass %><%= pkg.name %>.scss',
+          banner: '/*! <%= pkg.name %> (<%= pkg.version %>), built on <%= grunt.template.today("yyyy-mm-dd") %> */\n'
         }
       }
     },
@@ -37,13 +44,13 @@ module.exports = function(grunt) {
     requirejs: {
       compile: {
         options: {
-          mainConfigFile: '_/js/common.js',
-          appDir: '_/js',
+          mainConfigFile: '<%= dirs.js %>/common.js',
+          appDir: '<%= dirs.js %>',
           dir: '_/build',
           // keepBuildDir: true,
           modules: [
             {
-              name: 'init',
+              name: '<%= pkg.name %>',
               include: ['jquery']
               // exclude: [jquery.alpha]
             }
@@ -66,17 +73,17 @@ module.exports = function(grunt) {
     watch: {
       sass: {
         files: [
-          '_/sass/*.scss',
-          '_/sass/global/*.scss',
-          '_/sass/template/*.scss',
-          '_/sass/template/layout/*.scss',
-          '_/sass/template/partials/*.scss',
+          '<%= dirs.sass %>*.scss',
+          '<%= dirs.sass %>global/*.scss',
+          '<%= dirs.sass %>template/*.scss',
+          '<%= dirs.sass %>template/layout/*.scss',
+          '<%= dirs.sass %>template/partials/*.scss',
         ],
         tasks: ['compass:dev']
       },
 
       js: {
-        files: ['_/js/*.js'],
+        files: ['<%= dirs.js %>/*.js'],
         tasks: ['requirejs']
       },
 
