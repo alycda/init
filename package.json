@@ -28,7 +28,6 @@
     "grunt-modernizr": "*",
 
 
-    "grunt-contrib-csslint": "*",
     "grunt-contrib-jshint": "*",
     "grunt-contrib-imagemin": "*"
 
