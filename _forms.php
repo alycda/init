@@ -5,7 +5,7 @@
 	<meta charset="utf-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-	<link rel="stylesheet" href="_/css/styles.css" type="text/css"/>
+	<link rel="stylesheet" href="_/css/init.css">
 </head>
 
 <body>

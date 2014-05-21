@@ -3,6 +3,6 @@ define(["jquery", "inc/jquery.alpha", "inc/jquery.beta"], function($) {
 
     //the jquery.alpha.js and jquery.beta.js plugins have been loaded.
     $(function() {
-        $('body').alpha().beta();
+      $('.content').alpha().beta();
     });
 });
