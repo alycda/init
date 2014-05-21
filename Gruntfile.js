@@ -34,6 +34,23 @@ module.exports = function(grunt) {
       }
     },
 
+    requirejs: {
+      compile: {
+        options: {
+          mainConfigFile: '_/js/common.js',
+          baseUrl: './',
+          appDir: '_/js',
+          dir: '_/build',
+          modules: [
+            {
+              name: 'init',
+              include: ['jquery']
+            }
+          ]
+        }
+      }
+    },
+
     watch: {
       sass: {
         files: [
@@ -44,6 +61,11 @@ module.exports = function(grunt) {
           '_/sass/template/partials/*.scss',
         ],
         tasks: ['compass:dev']
+      },
+
+      js: {
+        files: ['_/js/*.js'],
+        tasks: ['requirejs']
       },
 
       livereload: {
@@ -57,6 +79,7 @@ module.exports = function(grunt) {
 
   // Load the plugins.
   grunt.loadNpmTasks('grunt-contrib-compass');
+  grunt.loadNpmTasks('grunt-contrib-requirejs');
   grunt.loadNpmTasks('grunt-contrib-watch');
 
   // Default task(s).
