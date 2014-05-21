@@ -19,6 +19,7 @@ module.exports = function(grunt) {
           banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
         }
       },
+
       dist: {
         options: {
           basepath: '_/',
@@ -31,14 +32,34 @@ module.exports = function(grunt) {
           banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
         }
       }
+    },
+
+    watch: {
+      sass: {
+        files: [
+          '_/sass/*.scss',
+          '_/sass/global/*.scss',
+          '_/sass/template/*.scss',
+          '_/sass/template/layout/*.scss',
+          '_/sass/template/partials/*.scss',
+        ],
+        tasks: ['compass:dev']
+      },
+
+      livereload: {
+        files: ['_/css/*.css'],
+        options: { livereload: true }
+      }
+
     }
 
   });
 
   // Load the plugins.
   grunt.loadNpmTasks('grunt-contrib-compass');
+  grunt.loadNpmTasks('grunt-contrib-watch');
 
   // Default task(s).
-  grunt.registerTask('default', ['compass:dev']);
+  grunt.registerTask('default', ['watch']);
 
 };
