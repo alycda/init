@@ -21,15 +21,17 @@
     "bower": "*",
     "grunt": "*",
     "grunt-contrib-compass": "*",
-    "grunt-contrib-concat": "*",
-    "grunt-contrib-uglify": "*",
+    "grunt-autoprefixer": "*",
     "grunt-contrib-requirejs": "*",
-    "grunt-contrib-csslint": "*",
-    "grunt-contrib-jshint": "*",
-    "grunt-contrib-imagemin": "*",
     "grunt-contrib-watch": "*",
     "load-grunt-tasks": "*",
     "grunt-modernizr": "*",
-    "grunt-autoprefixer": "*"
+
+
+    "grunt-contrib-csslint": "*",
+    "grunt-contrib-jshint": "*",
+    "grunt-contrib-imagemin": "*"
+
+
   }
 }

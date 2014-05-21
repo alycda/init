@@ -106,11 +106,8 @@ module.exports = function(grunt) {
 
   });
 
-  // Load the plugins.
-  grunt.loadNpmTasks('grunt-contrib-compass');
-  grunt.loadNpmTasks('grunt-autoprefixer');
-  grunt.loadNpmTasks('grunt-contrib-requirejs');
-  grunt.loadNpmTasks('grunt-contrib-watch');
+  // load all grunt tasks matching the `grunt-*` pattern
+  require('load-grunt-tasks')(grunt);
 
   // Default task(s).
   grunt.registerTask('default', ['watch']);
