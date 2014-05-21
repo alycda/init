@@ -8,6 +8,7 @@ module.exports = function(grunt) {
     dirs: {
       base: '_/',
       sass: '<%= dirs.base %>sass/',
+      css: '<%= dirs.base %>css/',
       js: '<%= dirs.base %>js/'
     },
 
@@ -41,13 +42,23 @@ module.exports = function(grunt) {
       }
     },
 
+    autoprefixer: {
+      options: {
+        // Task-specific options go here.
+      },
+      no_dest: {
+        // Target-specific file lists and/or options go here.
+        src: '<%= dirs.css %><%= pkg.name %>.css'
+      }
+    },
+
     requirejs: {
       compile: {
         options: {
           mainConfigFile: '<%= dirs.js %>/common.js',
           appDir: '<%= dirs.js %>',
           dir: '_/build',
-          // keepBuildDir: true,
+          keepBuildDir: true,
           modules: [
             {
               name: '<%= pkg.name %>',
@@ -79,16 +90,16 @@ module.exports = function(grunt) {
           '<%= dirs.sass %>template/layout/*.scss',
           '<%= dirs.sass %>template/partials/*.scss',
         ],
-        tasks: ['compass:dev']
+        tasks: ['compass:dev', 'autoprefixer:no_dest']
       },
 
       js: {
-        files: ['<%= dirs.js %>/*.js'],
+        files: ['<%= dirs.js %>*.js'],
         tasks: ['requirejs']
       },
 
       livereload: {
-        files: ['_/css/*.css'],
+        files: ['<%= dirs.css %>*.css'],
         options: { livereload: true }
       }
 
@@ -98,6 +109,7 @@ module.exports = function(grunt) {
 
   // Load the plugins.
   grunt.loadNpmTasks('grunt-contrib-compass');
+  grunt.loadNpmTasks('grunt-autoprefixer');
   grunt.loadNpmTasks('grunt-contrib-requirejs');
   grunt.loadNpmTasks('grunt-contrib-watch');
 
