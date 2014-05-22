@@ -28,6 +28,7 @@
     "grunt-modernizr": "*",
     "grunt-contrib-jshint": "*",
     "grunt-contrib-imagemin": "*",
-    "load-grunt-config": "^0.9.2"
+    "load-grunt-config": "^0.9.2",
+    "grunt-newer": "^0.7.0"
   }
 }

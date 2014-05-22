@@ -7,12 +7,12 @@ module.exports = {
       '<%= dirs.sass %>template/layout/*.scss',
       '<%= dirs.sass %>template/partials/*.scss',
     ],
-    tasks: ['compass:dev', 'autoprefixer:no_dest']
+    tasks: ['newer:compass:dev', 'newer:autoprefixer:no_dest']
   },
 
   js: {
     files: ['<%= dirs.js %>*.js'],
-    tasks: ['requirejs']
+    tasks: ['newer:requirejs']
   },
 
   livereload: {
