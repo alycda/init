@@ -7,7 +7,7 @@ module.exports = {
     "devFile" : "<%= dirs.build %>modernizr-latest.js",
 
     // [REQUIRED] Path to save out the built file.
-    "outputFile" : "<%= dirs.build %>modernizr-custom.js", //<%= package.name %>
+    "outputFile" : "<%= files.modernizr %>",
 
     // Based on default settings on http://modernizr.com/download/
     "extra" : {

@@ -15,5 +15,10 @@ module.exports = {
   livereload: {
     files: ['<%= files.css %>'],
     options: { livereload: true }
+  },
+
+  grunt: {
+    files: ['<%= files.grunt %>'],
+    options: { reload: true }
   }
 };

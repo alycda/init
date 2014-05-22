@@ -3,6 +3,11 @@
 module.exports = function (grunt, options) {
   return {
 
+    grunt: [
+      'Gruntfile.js',
+      'grunt/*.js'
+    ],
+
     sass: [
       '<%= dirs.sass %>*.scss',
       '<%= dirs.sass %>global/*.scss',
@@ -15,10 +20,13 @@ module.exports = function (grunt, options) {
 
     css: ['<%= dirs.css %>*.css'],
 
+    // autoprefixr: ['<%= dirs.css %><%= package.name %>.css'] //this is the input/output file
+
     jsConfig: ['<%= dirs.js %>/common.js'],
 
-    js: ['<%= dirs.js %>*.js']
+    js: ['<%= dirs.js %>*.js'],
 
-    //modernizr: []
+    //modernizrIgnore: ['<%= dirs.build %>modernizr-latest.js'],
+    modernizr: ['<%= dirs.build %>modernizr-custom.js'] //<%= package.name %>
   };
 };

@@ -2,7 +2,7 @@
 
 module.exports = {
   base: '_/',
-  components: '<%= dirs.base %>components/',
+  components: '<%= dirs.base %>components/', // bower installed
   sass: '<%= dirs.base %>sass/',
   css: '<%= dirs.base %>css/',
   js: '<%= dirs.base %>js/',
