@@ -1,22 +1,19 @@
+// https://github.com/firstandthird/load-grunt-config
+// https://github.com/gruntjs/grunt-contrib-watch
+
 module.exports = {
   sass: {
-    files: [
-      '<%= dirs.sass %>*.scss',
-      '<%= dirs.sass %>global/*.scss',
-      '<%= dirs.sass %>template/*.scss',
-      '<%= dirs.sass %>template/layout/*.scss',
-      '<%= dirs.sass %>template/partials/*.scss',
-    ],
-    tasks: ['newer:compass:dev', 'newer:autoprefixer:no_dest']
+    files: ['<%= files.sass %>'],
+    tasks: ['compass:dev', 'autoprefixer:no_dest'] // newer:
   },
 
   js: {
-    files: ['<%= dirs.js %>*.js'],
-    tasks: ['newer:requirejs']
+    files: ['<%= files.js %>'],
+    tasks: ['requirejs'] // newer:
   },
 
   livereload: {
-    files: ['<%= dirs.css %>*.css'],
+    files: ['<%= files.css %>'],
     options: { livereload: true }
   }
 };

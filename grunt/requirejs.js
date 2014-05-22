@@ -4,7 +4,7 @@
 module.exports = {
   compile: {
     options: {
-      mainConfigFile: '<%= dirs.js %>/common.js',
+      mainConfigFile: '<%= files.jsConfig %>',
       appDir: '<%= dirs.js %>',
       dir: '<%= dirs.build %>',
       keepBuildDir: true,

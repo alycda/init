@@ -8,6 +8,6 @@ module.exports = {
   },
   no_dest: {
     // Target-specific file lists and/or options go here.
-    src: '<%= dirs.css %><%= package.name %>.css'
+    src: '<%= dirs.css %><%= package.name %>.css' // build?
   }
 };

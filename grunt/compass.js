@@ -5,14 +5,12 @@ module.exports = {
   dev: {
     options: {
       sassDir: '<%= dirs.sass %>',
-      cssDir: '<%= dirs.css %>', // build/
-      importPath: '<%= dirs.base %>components/',
+      cssDir: '<%= dirs.css %>', // build?
+      importPath: '<%= dirs.components %>',
       environment: 'development',
       outputStyle: 'compact',
-      // specify: '<%= dirs.sass %><%= package.name %>.scss',
-      // require: ['sass-css-importer'],
-      trace: true,
-      // banner: '/*! <%= package.name %> (<%= package.version %>), built on <%= grunt.template.today("yyyy-mm-dd") %> */\n'
+      // require: ['<%= files.sassRequire %>'],
+      trace: true
     }
   },
 
@@ -20,11 +18,11 @@ module.exports = {
     options: {
       sassDir: '<%= dirs.sass %>',
       cssDir: '<%= dirs.css %>',
-      importPath: '<%= dirs.base %>components/',
+      importPath: '<%= dirs.components %>',
       environment: 'production',
       outputStyle: 'compressed',
       specify: '<%= dirs.sass %><%= package.name %>.scss',
-      banner: '/*! <%= package.name %> (<%= package.version %>), built on <%= grunt.template.today("yyyy-mm-dd") %> */\n'
+      banner: '/*! <%= package.name %> (<%= package.version %>), built on <%= grunt.template.today("yyyy-mm-dd") %> */\n' //only works when specify option is used
     }
   }
 };
