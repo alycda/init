@@ -1,10 +1,13 @@
+// https://github.com/firstandthird/load-grunt-config
+// https://github.com/Modernizr/grunt-modernizr#config-options
+
 module.exports = {
   dist: {
     // [REQUIRED] Path to the build you're using for development.
     "devFile" : "<%= dirs.build %>modernizr-latest.js",
 
     // [REQUIRED] Path to save out the built file.
-    "outputFile" : "<%= dirs.build %>modernizr-custom.js",
+    "outputFile" : "<%= dirs.build %>modernizr-custom.js", //<%= package.name %>
 
     // Based on default settings on http://modernizr.com/download/
     "extra" : {

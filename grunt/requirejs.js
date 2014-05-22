@@ -1,3 +1,6 @@
+// https://github.com/firstandthird/load-grunt-config
+// https://github.com/gruntjs/grunt-contrib-requirejs#usage-examples
+
 module.exports = {
   compile: {
     options: {
@@ -7,7 +10,7 @@ module.exports = {
       keepBuildDir: true,
       modules: [
         {
-          name: 'init', //<%= pkg.name %>
+          name: '<%= package.name %>',
           include: ['jquery']
           // exclude: [jquery.alpha]
         }
