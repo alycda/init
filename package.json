@@ -32,6 +32,7 @@
     "grunt-newer": "^0.7.0",
     "grunt-lib-phantomjs": "^0.6.0",
     "karma": "^0.12.16",
-    "grunt-karma": "^0.8.3"
+    "grunt-karma": "^0.8.3",
+    "grunt-githooks": "^0.3.1"
   }
 }
