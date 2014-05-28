@@ -9,7 +9,7 @@ module.exports = {
       importPath: '<%= dirs.components %>',
       environment: 'development',
       outputStyle: 'compact',
-      // require: ['<%= files.sassRequire %>'],
+      // require: ['<%= files.sassRequire %>'], // http://stackoverflow.com/questions/20735910/compass-plugins-to-work-with-grunt
       trace: true
     }
   },
